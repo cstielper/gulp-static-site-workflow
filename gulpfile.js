@@ -13,6 +13,7 @@ const gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	eslint = require('gulp-eslint'),
 	notify = require('gulp-notify'),
+	prettier = require('gulp-prettier'),
 	browserSync = require('browser-sync').create();
 
 // Spin up a server
@@ -112,6 +113,18 @@ gulp.task('eslint', () => {
 	);
 });
 
+// Cleanup javascript formatting
+gulp.task('prettier', () => {
+	gulp
+		.src('./src/js/**/*.js')
+		.pipe(prettier({
+			tabWidth: 2,
+			printWidth: 80,
+			singleQuote: true
+		}))
+		.pipe(gulp.dest('./src/js/'));
+});
+
 // Compile JS: Transpile with Babel, rename file, minify output, reload browser
 gulp.task('js', () => {
 	gulp
@@ -144,5 +157,5 @@ gulp.task('watch', ['serve'], () => {
 	//gulp.watch('./src/js/**/*.js', ['eslint']); Linting in code editor. Command can still be run from terminal if you want to lint there
 });
 
-// Defaul task
+// Default task
 gulp.task('default', ['watch']);
