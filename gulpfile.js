@@ -122,7 +122,8 @@ gulp.task('prettier', () => {
 			printWidth: 80,
 			singleQuote: true
 		}))
-		.pipe(gulp.dest('./src/js/'));
+		.pipe(gulp.dest('./src/js/'))
+		.pipe(notify({ message: 'TASK: "prettier" completed', onLast: true }));
 });
 
 // Compile JS: Transpile with Babel, rename file, minify output, reload browser
@@ -136,9 +137,9 @@ gulp.task('js', () => {
 				suffix: '.min'
 			})
 		)
-		.pipe(notify({ message: 'TASK: "js" completed', onLast: true }))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js/'))
+		.pipe(notify({ message: 'TASK: "js" completed', onLast: true }))
 		.pipe(
 			browserSync.reload({
 				stream: true
