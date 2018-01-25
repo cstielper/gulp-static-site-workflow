@@ -18,5 +18,5 @@ There is a task to optimize images (gulp imgs) using imageOptim, but it is hit o
 1. Extract this repo to your staging area
 2. Uncompress "directory_structure.zip" and move its contents to the root of your project. You can delete the ZIP file after this.
 3. Run npm install
-4. Set the variables at the top of gulfile.js (project URL, cssOutput)
+4. Set the variables at the top of [gulpfile.js](gulpfile.js) (project URL, cssOutput)
 5. Run the default task (gulp) to get started. Work in the "src" directory. Production files are output to the "dist" directory.
