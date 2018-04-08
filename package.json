@@ -1,41 +1,32 @@
 {
-	"name": "landing-page-wf",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"dependencies": {},
-	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-preset-env": "^1.6.0",
-		"browser-sync": "^2.18.13",
-		"gulp": "^3.9.1",
-		"gulp-autoprefixer": "^4.0.0",
-		"gulp-babel": "^7.0.0",
-		"gulp-eslint": "^4.0.0",
-		"gulp-imageoptim": "^1.0.9",
-		"gulp-notify": "^2.2.0",
-		"gulp-plumber": "^1.1.0",
-		"gulp-prettier": "^1.1.0",
-		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^3.1.0",
-		"gulp-sourcemaps": "^2.6.1",
-		"gulp-uglify": "^3.0.0"
-	},
-	"babel": {
-		"presets": [
-			[
-				"env",
-				{
-					"targets": {
-						"browsers": ["last 2 versions"]
-					}
-				}
-			]
-		]
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "Chris Stielper",
-	"license": "ISC"
+  "name": "landing-page-workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Stielper",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-better-rollup": "^3.1.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "yargs": "^11.0.0"
+  }
 }
