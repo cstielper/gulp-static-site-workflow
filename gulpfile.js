@@ -16,8 +16,6 @@ const gulp = require('gulp'),
   argv = require('yargs').argv,
   browserSync = require('browser-sync').create();
 
-const isProduction = (argv.production === undefined) ? false : true;
-
 /**************/
 
 gulp.task('serve', () => {
