@@ -132,7 +132,7 @@ gulp.task('js', () => {
         suffix: '.min'
       })
     )
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(plumber.stop())
     .pipe(gulp.dest('./dist/js'))
     .pipe(
@@ -155,11 +155,11 @@ gulp.task('build', () => {
 });
 
 gulp.task('watch', ['serve'], () => {
-  gulp.watch('src/fonts/*', ['fonts']);
-  gulp.watch('src/sass/**/*.scss', ['css']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/**/*.php', ['php']);
-  gulp.watch('src/**/*.html', ['html']);
+  gulp.watch('./src/fonts/*', ['fonts']);
+  gulp.watch('./src/sass/**/*.scss', ['css']);
+  gulp.watch('./src/js/**/*.js', ['js']);
+  gulp.watch('./src/**/*.php', ['php']);
+  gulp.watch('./src/**/*.html', ['html']);
 });
 
 gulp.task('default', ['watch']);
